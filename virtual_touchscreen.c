@@ -74,7 +74,7 @@ static int __init virt_ts_init(void)
     }
     printk ("virtual_touchscreen: Major=%d\n", Major);
 
-    cl = class_create(THIS_MODULE, DEVICE_NAME);
+    cl = class_create(DEVICE_NAME);
     if (!IS_ERR(cl)) {
 	    dev = device_create(cl, NULL, MKDEV(Major,0), NULL, DEVICE_NAME);
     }
