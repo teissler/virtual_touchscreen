@@ -75,7 +75,7 @@ static int __init virt_ts_init(void)
     }
     printk ("virtual_touchscreen: Major=%d\n", Major);
 
-    #if LINUX_VERSION_CODE >= KERNEL_VERSION(6.4.0)
+    #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 4, 0)
     cl = class_create(DEVICE_NAME);
     #else
     cl = class_create(THIS_MODULE, DEVICE_NAME);
